@@ -34,12 +34,9 @@ body {
 /* Navbar */
 .menu {
   display: flex;
-  justify-content: flex-end; /* Alinha os itens do menu à direita */
-  align-items: center; /* Garante que os itens fiquem alinhados verticalmente */
+  justify-content: flex-end;
+  align-items: center;
 }
-
-
-
 
 .menu a {
   text-decoration: none;
@@ -47,7 +44,7 @@ body {
   font-size: 15pt;
   margin-right: 20px;
   font-weight: bold;
-  transition: color 0.3s ease, font-size 0.3s ease; /* Transição suave para cor e tamanho */
+  transition: color 0.3s ease, font-size 0.3s ease;
 }
 
 .logo {
@@ -55,16 +52,16 @@ body {
 }
 
 .menu a:hover {
-  color: rgb(36, 26, 26); /* Cor do link no hover */
-  font-size: 20pt; /* Tamanho da fonte no hover */
-  font-weight: bold; /* Garante que o peso da fonte aumente */
-  transition: color 0.3s ease, font-size 0.3s ease; /* A transição vai ser suave */
+  color: rgb(36, 26, 26);
+  font-size: 20pt;
+  font-weight: bold;
+  transition: color 0.3s ease, font-size 0.3s ease;
 }
 
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Isso garante que o logo fique à esquerda e o menu à direita */
+  justify-content: space-between;
   padding: 20px;
 }
 
@@ -85,15 +82,15 @@ nav ul li {
 
 /* Texto principal */
 .col-2 h1 {
-  font-size: 50px; /* Tamanho do título */
+  font-size: 50px;
   font-weight: bold;
-  margin-bottom: 10px; /* Espaço entre o título e o subtítulo */
+  margin-bottom: 10px;
 }
 
 .col-2 h3 {
-  font-size: 18px; /* Tamanho do subtítulo */
-  margin-top: 10px; /* Espaço acima do subtítulo */
-  color: #333; /* Cor opcional para melhor contraste */
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
 }
 
 /* Botão de "Veja Nossos Produtos" */
@@ -103,9 +100,9 @@ nav ul li {
   color: white;
   padding: 10px 20px;
   text-decoration: none;
-  border-radius: 30px; /* Bordas arredondadas */
+  border-radius: 30px;
   transition: background 0.3s ease;
-  margin-top: 20px; /* Move o botão levemente para baixo */
+  margin-top: 20px;
 }
 
 .btn:hover {
@@ -114,10 +111,9 @@ nav ul li {
 
 /* Imagem principal */
 .col-2 img {
-  max-width: 100%; /* Ajuste do tamanho da imagem principal */
-  border-radius: 10px; /* Bordas arredondadas */
+  max-width: 100%;
+  border-radius: 10px;
   padding: 20px 0;
-  /* PARA AJUSTAR O TAMANHO DA IMAGEM: altere o valor de max-width acima */
 }
 
 /* Geral: Estilo do quadrado */
@@ -127,7 +123,7 @@ nav ul li {
   margin: 10px;
   padding: 15px;
   text-align: left;
-  background-color: #000000; 
+  background-color: #000000;
   border-radius: 8px;
   transition: transform 0.2s;
 }
@@ -138,13 +134,10 @@ nav ul li {
   margin: 10px;
   padding: 15px;
   text-align: left;
-  background-color: #000000; 
+  background-color: #000000;
   border-radius: 8px;
   transition: transform 0.2s;
 }
-
-
-
 
 .quadrado:hover {
   transform: scale(1.05);
@@ -168,8 +161,6 @@ nav ul li {
   color: #ffffff;
 }
 
-
-
 /* Layout geral */
 .row {
   display: flex;
@@ -177,12 +168,12 @@ nav ul li {
   flex-wrap: wrap;
   justify-content: space-around;
   padding-left: 40px;
-  padding-bottom: 50px; /* Reduzido de 250px para 50px */
+  padding-bottom: 50px;
 }
 
 header {
-  margin-top: 100px; /* Reduzido de 700px para 50px */
-  padding-bottom: 500px; /* Reduzido de 500px para 50px */
+  margin-top: 100px;
+  padding-bottom: 500px;
   background-color: rgb(0, 0, 0);
   height: 450px;
 }
@@ -192,27 +183,115 @@ header {
   justify-content: space-between;
   width: 150px;
   height: 40px;
-  }
-  
-  .social-media a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid transparent;
-    text-decoration: none;
-    transform: rotate(45deg);
-    transition: .5s;
-    }
+}
 
-    .social-media a:hover {
-    border-color: rgb(0, 174, 255);
-    }
-    
-  .social-media a i {
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid transparent;
+  text-decoration: none;
+  transform: rotate(45deg);
+  transition: .5s;
+}
+
+.social-media a:hover {
+  border-color: rgb(0, 174, 255);
+}
+
+.social-media a i {
   font-size: 24px;
   color: rgb(0, 0, 0);
   transform: rotate(-45deg);
+}
+
+/* Responsividade - Ajustes para telas menores */
+
+/* Ajuste para telas pequenas, como smartphones */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
   }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo img {
+    width: 150px;
+    height: auto;
+  }
+
+  .col-2 h1 {
+    font-size: 40px;
+  }
+
+  .col-2 h3 {
+    font-size: 16px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .quadrado,
+  .quadrado2 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #quadrado-preto {
+    flex-direction: column;
+  }
+
+  .social-media {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .social-media a {
+    margin: 0 10px;
+  }
+}
+
+/* Ajustes para telas muito pequenas, como celulares em retrato */
+@media (max-width: 480px) {
+  .col-2 h1 {
+    font-size: 30px;
+  }
+
+  .col-2 h3 {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  .social-media {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+
+  .social-media a {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+}
